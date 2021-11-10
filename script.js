@@ -42,14 +42,14 @@ else{
 
 function main(){
     
-    console.log(throwRock());
+    // console.log(throwRock());
 
 }
 
 
 function throwRock(){
 
-    rnJesus = Math.ceil(Math.random()*5)
+    rnJesus = Math.ceil(Math.random()*5 -1)
     console.log(rnJesus);
     const rock = 
     [["Draw!", "tie"],
@@ -58,7 +58,9 @@ function throwRock(){
     ["The Rock crushes lizard!", "win"],
     ["Spock vaporizes The Rock!", "lose"]];
     
-    return(rock[rnJesus-1])
+    console.log(rock[rnJesus])
+
+    $("#" + rnJesus).show(1000).delay(1000).hide(1000)
 
 }
 

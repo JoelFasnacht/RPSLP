@@ -12,6 +12,11 @@
     max-width: 200px;
     max-height: 200px;
 }
+
+.cpu{
+    display: none;
+}
+
 body{
     background-color: rgb(88, 85, 85)
 }
