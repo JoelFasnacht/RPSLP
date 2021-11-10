@@ -1,117 +1,136 @@
 
-main()
+let wins = 0;
+let draws = 0;
+let losses = 0;
 
-function main(){
-console.log(throwRock());
+// function throwRock(){
 
-}
+//   rnJesus = Math.ceil(Math.random()*5)
 
-
-function throwRock(){
-
-  rnJesus = Math.ceil(Math.random()*5)
-
-  if(response == 1){
-    return "Draw!";
-  }
-  else if(response == 2){
-    // scoreAI()
-    return "Paper covers the Rock!"
-  }
-  else if(response == 3){
-    // scoreYou()
-    return "The Rock crushes scissors!"
-  }
-  else if(response == 4){
-    // scoreYou()
-    return "The Rock crushes lizard!"
-  }
-  else if(response == 5){
-    // scoreAI()
-    return "Spock vaporizes The Rock!"
-  }
+//   if(response == 1){
+//     return "Draw!";
+//   }
+//   else if(response == 2){
+//     // scoreAI()
+//     return "Paper covers the Rock!"
+//   }
+//   else if(response == 3){
+//     // scoreYou()
+//     return "The Rock crushes scissors!"
+//   }
+//   else if(response == 4){
+//     // scoreYou()
+//     return "The Rock crushes lizard!"
+//   }
+//   else if(response == 5){
+//     // scoreAI()
+//     return "Spock vaporizes The Rock!"
+//   }
   
-}
+// }
 
 function throwPaper(){
 
-  rnJesus = Math.ceil(Math.random()*5)
+ let rnJesus = Math.ceil(Math.random()*5 - 1)
 
 const paper =
-[["Paper covers The Rock!",win],
-["Draw!",tie],
-["Scissors cuts paper!",lose],
-["Lizard eats paper!",lose],
-["Paper disproves Spock!",win]];
+[["Paper covers The Rock!", "win"],
+["Draw!", "tie"],
+["Scissors cuts paper!", "lose"],
+["Lizard eats paper!", "lose"],
+["Paper disproves Spock!", "win"]];
 
-
-
-winFunction(paper[rnJesus-1])
+console.log(rnJesus)
+console.log(paper[rnJesus])
+let result = paper[rnJesus]
+console.log(result[1])
+if(result[1] === "win"){
+  wins++
+  $("#win-score").text(wins)
+  $("#result").text(result[0])
+}
+else if(result[1] === "lose"){
+  losses++
+  $("#loss-score").text(losses)
+  $("#result").text(result[0])
+}
+else{
+  draws++
+  $("#draw-score").text(draws)
+  $("#result").text("Draw!")
 
 }
 
-function throwScissors(){
-  rnJesus = Math.ceil(Math.random()*5)
-
-  if(response == 1){
-    return "The Rock crushes scissors!"
-  }
-  else if(response == 2){
-    return "Scissors cut paper!"
-  }
-  else if(response == 3){
-    return "Draw!";
-  }
-  else if(response == 4){
-    return "Scissors decapitate lizard!"
-  }
-  else if(response == 5){
-    return "Spock smashes scissors!"
-  }
-
-}
-function throwLizard(){
-  rnJesus = Math.ceil(Math.random()*5)
-
-  if(response == 1){
-    return "The Rock crushes lizard";
-  }
-  else if(response == 2){
-    return "Lizard eats paper!"
-  }
-  else if(response == 3){
-
-    return "Scissors decapitate lizard!"
-  }
-  else if(response == 4){
-    return "Draw!";
-  }
-  else if(response == 5){
-
-    return "Lizard poisons Spock!"
-  }
+// winFunction(paper[rnJesus-1])
 
 }
 
-function throwSpock(){
-  rnJesus = Math.ceil(Math.random()*5)
+// function throwScissors(){
+//   rnJesus = Math.ceil(Math.random()*5)
 
-  if(response == 1){
-    return "Spock vaporizes The Rock";
-  }
-  else if(response == 2){
-    return "Paper disproves Spock!"
-  }
-  else if(response == 3){
-    return "Spock smashes scissors!"
-  }
-  else if(response == 4){
+//   if(response == 1){
+//     return "The Rock crushes scissors!"
+//   }
+//   else if(response ==  2){
+//     return "Scissors cut paper!"
+//   }
+//   else if(response === 3){
+//     return "Draw!";
+//   }
+//   else if(response == 4){
+//     return "Scissors decapitate lizard!"
+//   }
+//   else if(response == 5){
+//     return "Spock smashes scissors!"
+//   }
 
-    return "Lizard poisons Spock!"
-  }
-  else if(response == 5){
+//}
 
-    return "Draw!";
-  }
 
-}
+
+// function throwLizard(){
+//   rnJesus = Math.ceil(Math.random()*5)
+
+//   if(response == 1){
+//     return "The Rock crushes lizard";
+//   }
+//   else if(response == 2){
+//     return "Lizard eats paper!"
+//   }
+//   else if(response == 3){
+
+//     return "Scissors decapitate lizard!"
+//   }
+//   else if(response == 4){
+//     return "Draw!";
+//   }
+//   else if(response == 5){
+
+//     return "Lizard poisons Spock!"
+//   }
+
+// }
+
+// function throwSpock(){
+//   rnJesus = Math.ceil(Math.random()*5)
+
+//   if(response == 1){
+//     return "Spock vaporizes The Rock";
+//   }
+//   else if(response == 2){
+//     return "Paper disproves Spock!"
+//   }
+//   else if(response == 3){
+//     return "Spock smashes scissors!"
+//   }
+//   else if(response == 4){
+
+//     return "Lizard poisons Spock!"
+//   }
+//   else if(response == 5){
+
+//     return "Draw!";
+//   }
+
+// }
+
