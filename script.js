@@ -3,6 +3,8 @@ let wins = 0;
 let draws = 0;
 let losses = 0;
 
+var reverbFart = new Audio("images/Reverb-Fart.mp3");
+
 
 const rock = 
 [["Draw!", "tie"],
@@ -64,6 +66,7 @@ function winCondition(result){
     $("#win-score").text(wins)
   }
   else if(result[1] === "lose"){
+    reverbFart.play();
     losses++
     $("#loss-score").text(losses)
   }
