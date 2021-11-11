@@ -48,29 +48,30 @@ function main(){
 
 
 function throwX(playerChoice){
-  rnJesus = Math.ceil(Math.random()*5 -1)
+  rnJesus = Math.ceil(Math.random()*5 -1);
 
-  $("#" + rnJesus).show(1000).delay(1000).hide(1000)
+  $("#" + rnJesus).slideDown(1000).delay(1000).slideUp(1000);
+  
 
-  winCondition(playerChoice[rnJesus])
+  winCondition(playerChoice[rnJesus]);
 }
 
 function winCondition(result){
 
-  $("#result").text(result[0])
+  $("#result").text(result[0]).slideDown(1000).delay(1000).slideUp(1000);
 
   if(result[1] === "win"){
-    wins++
-    $("#win-score").text(wins)
+    wins++;
+    $("#win-score").text(wins);
   }
   else if(result[1] === "lose"){
-    losses++
-    $("#loss-score").text(losses)
+    losses++;
+    $("#loss-score").text(losses);
   }
   else{
-    draws++
-    $("#draw-score").text(draws)
-    $("#result").text("Draw!")
+    draws++;
+    $("#draw-score").text(draws);
+    $("#result").text("Draw!");
   
   }
  }
