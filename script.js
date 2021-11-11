@@ -1,10 +1,8 @@
-
 let wins = 0;
 let draws = 0;
 let losses = 0;
 
 var reverbFart = new Audio("images/Reverb-Fart.mp3");
-
 
 const rock = 
 [["Draw!", "tie"],
@@ -34,7 +32,6 @@ const lizard =
 ["Draw!", "tie"],
 ["Lizard poisons Spock!", "win"]];
 
-
 const spock = 
 [["Spock vaporizes The Rock", "win"],
 ["Paper disproves Spock!", "lose"],
@@ -42,18 +39,11 @@ const spock =
 ["Lizard poisons Spock!", "lose"],
 ["Draw!", "tie"]];
 
-function main(){
-    
-    // console.log(throwRock());
-
-}
-
 
 function throwX(playerChoice){
   rnJesus = Math.ceil(Math.random()*5 -1);
 
   $("#" + rnJesus).slideDown(1000).delay(1000).slideUp(1000);
-  
 
   winCondition(playerChoice[rnJesus]);
 }
