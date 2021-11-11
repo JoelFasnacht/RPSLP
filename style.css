@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
 }
-.play{
+#play{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
 }
 .choice-photo{
@@ -16,7 +17,26 @@
 .cpu{
     display: none;
 }
+#result{
+    
+    text-align: center;
+}
 
 body{
     background-color: rgb(88, 85, 85)
+    
+}
+.row{
+    display: block;
+}
+
+#scores{
+    display: flex;
+    justify-content: space-evenly;
+}
+#cpuPlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
